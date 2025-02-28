@@ -6,7 +6,7 @@ This script exports rule failures for a specific assessment and device from Fire
 
 - Python 3.6+
 - Required Python packages:
-  - requests
+  - requests (already installed on FMOS)
 
 Install required packages:
 ```
@@ -21,7 +21,7 @@ python firemon_assessment_export.py -u URL -n USERNAME -p PASSWORD -d DEVICE_ID 
 
 ### Arguments
 
-- `-u`, `--url`: FireMon base URL (e.g., https://demo01.firemon.xyz)
+- `-u`, `--url`: FireMon base URL (e.g., https://demo01.firemon.com)
 - `-n`, `--username`: FireMon username
 - `-p`, `--password`: FireMon password
 - `-d`, `--device-id`: Device ID
@@ -31,14 +31,13 @@ python firemon_assessment_export.py -u URL -n USERNAME -p PASSWORD -d DEVICE_ID 
 ### Example
 
 ```
-python firemon_assessment_export.py -u https://demo01.firemon.xyz -n admin -p passwd -d 4 -a ddfe53ea-c146-4ffc-b199-fa5e600d3bee -o assessment_failures.csv
+python firemon_assessment_export.py -u https://demo01.firemon.com -n admin -p passwd -d 4 -a ddfe53ea-c146-4ffc-b199-fa5e600d3bee -o assessment_failures.csv
 ```
 
 ## CSV Output Format
 
 The script will generate a CSV file with the following columns:
 
-- Rule Section
 - Rule Name
 - Rule Number
 - Cumulative Rule Severity
